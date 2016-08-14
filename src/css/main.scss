@@ -1,0 +1,104 @@
+$meter-width: 300px;
+$needle-cap: 20px;
+
+body {
+	background-color: #252525;
+	color: #DADADA;
+}
+
+.demo-container {
+	width: 60vw;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.meter-amount {
+	font-family: Verdana, Arial;
+	font-weight: normal;
+}
+
+.meter-amount__value {
+	font-size: 40px;
+	text-align: center;
+}
+
+.meter-amount__data {
+	display: flex;
+	justify-content: space-between;
+	margin: -30px auto 0;
+	width: $meter-width;
+}
+
+.meter-display {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+	width: $meter-width;
+	height: ($meter-width / 2) + 20px;
+	position: relative;
+}
+
+.semi-circle {
+	position: relative;
+}
+
+.semi-circle:before{
+	background: #DADADA;
+	border-radius: $meter-width $meter-width 0 0;
+	content: "";
+	height: $meter-width / 2;
+	position: absolute;
+	width: $meter-width;
+}
+
+
+.semi-circle:after {
+	background: #252525;
+	border-radius: $meter-width $meter-width 0 0;
+	content: "";
+	height: 130px;
+	width: $meter-width - ($needle-cap * 2);
+	position: absolute;
+	left: $needle-cap;
+	bottom: ($meter-width / 2) * -1;
+}
+
+.needle {
+	width: 145px;
+	left: 5px;
+	height: 6px;
+	z-index: 3;
+	top: $meter-width / 2;
+	position: absolute;
+	transition: transform 1s ease;
+	transform-origin: 100% 3px;
+}
+
+
+.needle__tip {
+	position: absolute;
+	background: #252525;
+	height: $needle-cap;
+	width: 25px;
+	top: -7px;
+	left: -9px;
+}
+
+.needle__line {
+	background: #DADADA;
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	border-radius: 2px;
+}
+
+.needle__circle {
+	height: 10px;
+	width: 10px;
+	background: #252525;
+	position: absolute;
+	right: -10px;
+	top: -7px;
+	border-radius: 50%;
+}
