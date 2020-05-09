@@ -1,6 +1,6 @@
-/*global document */
+/* global document */
 
-import fetchData from './fetch-data';
+import fetchData from './fetch-data.js';
 import getCurrencyAmount from './get-currency-amount.js';
 
 function moveNeedle(amount) {
@@ -9,7 +9,7 @@ function moveNeedle(amount) {
 }
 
 function updateMeter() {
-	fetchData('https://widgister.herokuapp.com/challenge/frontend').then(data => {
+	fetchData().then(data => {
 		const {unit, value, min, max, format} = data;
 
 		if (min > max || value < min || value > max) {

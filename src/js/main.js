@@ -1,6 +1,6 @@
-/*global document */
+/* global document */
 
-import updateMeter from './update-meter';
+import updateMeter from './update-meter.js';
 
 console.log('Hello from main');
 

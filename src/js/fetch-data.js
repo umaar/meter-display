@@ -1,16 +1,6 @@
-/*global fetch, navigator */
+import randomBetween from './random.js';
 
-import 'whatwg-fetch';
-import PromiseModule from 'es6-promise';
-import randomBetween from './random';
-
-const Promise = PromiseModule.Promise;
-
-function fetchData(url) {
-	if (navigator.onLine) {
-		return fetch(url).then(response => response.json());
-	}
-
+function fetchData() {
 	console.info('Returning mock data');
 
 	return new Promise(resolve => {

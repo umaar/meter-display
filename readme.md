@@ -1,39 +1,20 @@
 
-# Meter Display
+### Meter Display
 
-## Requirements
+[![Actions Status](https://github.com/umaar/meter-display/workflows/Node%20CI/badge.svg)](https://github.com/umaar/meter-display/actions)
 
-- Node (tested on `6.2.0`)
+#### To view this in a browser:
 
-### Get Started
-
+```sh
+cd src
+python -m SimpleHTTPServer
 ```
-node -v # v6.2.0
+
+Then open up [http://localhost:8000/](http://localhost:8000/)
+
+#### To run tests
+
+```sh
 npm i
-```
-
-### Build
-
-```
-npm run build
-```
-
-Now open up `dist/index.html` in your browser
-
-### Development
-
-```
-npm start
-```
-
-### Tests (incomplete)
-
-```
-npm install -g testem
-
-# Unit tests
-npm test
-
-# Experimental headless browser tests
-npm run test-qunit
+make test
 ```
