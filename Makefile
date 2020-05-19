@@ -1,14 +1,11 @@
 # The default target must be at the top
-.DEFAULT_GOAL := start
+.DEFAULT_GOAL := test
 
 install:
 	npm install
 
 update-deps:
 	ncu -u
-
-start:
-	node src/main.js
 
 lint:
 	./node_modules/.bin/xo
