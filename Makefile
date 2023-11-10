@@ -4,14 +4,12 @@
 install:
 	npm install
 
+install-ci:
+	npm ci
+
 update-deps:
 	ncu -u
 
-lint:
-	./node_modules/.bin/xo
-
-unit:
+unit-test:
 	./node_modules/.bin/ava
-
-test: lint unit
 
